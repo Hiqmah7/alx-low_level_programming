@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "main"
 
 /**
@@ -11,20 +12,20 @@
 void print_diagsums(int *a, int size)
 {
 int i;
-int x, y;
+const int M = N = 4;
 
-x = 0;
-y = 0;
-
-i = 0;
-while (i < size)
+int mat[M][N]
 {
-x = x + *(a + i *size + i);
-y = y + *(a + i *size + size - i - 1);
-
-i++;
+int principal = 0, secondary = 0;
+for (int i = 0; i < N; i++)
+{
+principal += mat[i][i];
+secondary += mat[i][N - i - 1];
 }
-
-printf("%i, %i\n", x, y);
-
+printf("%s", "Principal Diagonal:");
+printf("%d\n", principal);
+printf("%s", "Secondary Diagonal:");
+printf("%d\n", secondary);
+}
+return (0);
 }
