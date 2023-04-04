@@ -5,20 +5,16 @@
  * @a: 2d array of chars
  *Return: void
  */
-void print_chessboard(char (*a)[8])
+void print_chessboard(char (*a)[8];
 {
-int row, col;
+int row = col = 7;
 
-row = 0;
-while (row < 8)
+for (row = 0; row < 8; row++)
 {
-col = 0;
-while (col < 8)
+for (col = 0; col < 8; col++)
 {
-_putchar (a[row][col]);
-col++;
+_putchar(a[row][col]);
 }
-_putchar ('\n');
-row++;
+_putchar('\n');
 }
 }
