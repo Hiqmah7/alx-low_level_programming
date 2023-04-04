@@ -6,26 +6,22 @@
  * print_diagsums - the sum of the two diagonals of a square matrix of integers
  * @a: 2d array of chars
  *@size: number matrix
-*Return: void
+ *Return: void
  */
-
 void print_diagsums(int *a, int size)
 {
 int i;
-const int M = N = 4;
+int principalsum, secondarysum;
 
-int mat[M][N]
+principalsum = 0;
+secondarysum = 0;
+
+i = 0;
+while (i < size)
 {
-int principal = 0, secondary = 0;
-for (int i = 0; i < N; i++)
-{
-principal += mat[i][i];
-secondary += mat[i][N - i - 1];
+principalsum = principalsum + *(a + i *size + i);
+secondarysum = secondarysum + *(a + i *size + size - i - 1);
+i++;
 }
-printf("%s", "Principal Diagonal:");
-printf("%d\n", principal);
-printf("%s", "Secondary Diagonal:");
-printf("%d\n", secondary);
-}
-return (0);
+printf("%i, %i\n", principalsum, secondarysum);
 }
