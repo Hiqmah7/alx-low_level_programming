@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <signal.h>
+#include<stdarg.h>
 /**
  * main -> prints min cointo make change
  * @argc: no of args
