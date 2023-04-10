@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <maths.h>
+#include <ctype.h>
 
 /**
  * main -  Minimum number of coins to make change
