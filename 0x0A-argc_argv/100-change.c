@@ -1,49 +1,38 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <maths.h>
-#include <ctype.h>
 
 /**
- * main -  Minimum number of coins to make change
- * @argc: size of argv array and number of command line arguments
- * @argv: An array of size argc
- * Return: 0
+ * main -> prints min cointo make change
+ * @argc: no of args
+ * @argv: array of string type
+ * Return: 0 if no errors, else 1
  */
 int main(int argc, char *argv[])
 {
-int coins = sum = 0;
+int a, n = 0, i, t;
+int c[5] = {25, 10, 5, 2, 1};
 if (argc != 2)
 {
-printf("Error\n");
+puts("Error");
 return (1);
 }
-sum = atoi(argv[1]);
-if (sum < 0)
+a = atoi(argv[1]);
+if (a <= 0)
 {
-printf("0\n");
-return (0);
+puts("0");
+return (1);
 }
-while (sum / 25)
+else
 {
-sum -= 25;
-coins++;
-}
-while (sum / 10)
+for (i = 0; i < 5; i++)
 {
-sum -= 10;
-coins++;
+t = a / c[i];
+a -= t *c[i];
+n += t;
+f(a == 0)
+break;
 }
-while (sum / 5)
-{
-sum -= 5;
-coins++;
 }
-while (sum / 2)
-{
-sum -= 2;
-coins++;
-}
-coins += sum;
-printf("%d\n", coins);
+printf("%d\n", n);
 return (0);
 }
