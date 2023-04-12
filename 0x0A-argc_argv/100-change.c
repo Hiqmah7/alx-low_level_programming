@@ -1,7 +1,5 @@
-#include <cstdlib>
-#include <iostream>
-#include <fstream>
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * main -> prints min cointo make change
  * @argc: no of args
@@ -30,7 +28,7 @@ for (i = 0; i < 5; i++)
 t = a / c[i];
 a -= t *c[i];
 n += t;
-f(a == 0)
+if (a == 0)
 break;
 }
 }
