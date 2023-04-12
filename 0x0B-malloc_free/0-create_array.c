@@ -4,7 +4,7 @@
 /**
  * create_array - Returns a pointer to a newly allocated space in memory.
  * @size: unsigned int
- * @c: char 
+ * @c: char
  * Return: char pointer
  */
 char *create_array(unsigned int size, char c)
